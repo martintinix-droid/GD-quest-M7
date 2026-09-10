@@ -1,0 +1,62 @@
+[gd_resource type="Theme" format=3 uid="uid://drays61pfu7xc"]
+
+[ext_resource type="StyleBox" uid="uid://cehl840r0u54m" path="res://lessons/button_brown.tres" id="1_ei3wx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulena"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6509804, 0.47843137, 0.21960784, 0)
+draw_center = false
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.32946238, 0.56526643, 0.83048147, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaryr"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.3005736, 0.2119231, 0.07579615, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jktrv"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.3005736, 0.2119231, 0.07579615, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4fo1"]
+content_margin_left = 48.0
+content_margin_top = 32.0
+content_margin_right = 48.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[resource]
+default_font_size = 48
+Button/styles/focus = SubResource("StyleBoxFlat_ulena")
+Button/styles/hover = SubResource("StyleBoxFlat_aaryr")
+Button/styles/normal = ExtResource("1_ei3wx")
+Button/styles/pressed = SubResource("StyleBoxFlat_jktrv")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_a4fo1")
