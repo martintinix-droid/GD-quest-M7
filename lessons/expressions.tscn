@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c7570ikyc5lpn"]
+
+[ext_resource type="Theme" uid="uid://drays61pfu7xc" path="res://lessons/main_theme.tres" id="1_okyrm"]
+[ext_resource type="Script" uid="uid://82wbh6kijyve" path="res://lessons/expressions.gd" id="2_uassf"]
+[ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="3_6oly8"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_2tl23"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_ycull"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_8tdcn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6vg2b"]
+shader = ExtResource("3_6oly8")
+shader_parameter/pattern_sampler = ExtResource("4_2tl23")
+shader_parameter/bg_color = Color(0.9684219, 0.8649509, 0.51820576, 1)
+shader_parameter/pattern_color = Color(0.6315502, 0.46179265, 0.21968943, 1)
+shader_parameter/pattern_size = 256.0
+
+[node name="Expressions" type="Control" unique_id=275407549]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_okyrm")
+script = ExtResource("2_uassf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=4619502]
+material = SubResource("ShaderMaterial_6vg2b")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Body" type="TextureRect" parent="." unique_id=1856563705]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ycull")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Expression" type="TextureRect" parent="Body" unique_id=1023443259]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_8tdcn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=985951477]
+layout_mode = 1
+offset_left = 31.0
+offset_top = 43.0
+offset_right = 569.0
+offset_bottom = 221.0
+metadata/_edit_group_ = true
+
+[node name="RowCharacter" type="HBoxContainer" parent="VBoxContainer" unique_id=921270195]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RowExpressions" type="HBoxContainer" parent="VBoxContainer" unique_id=1263181333]
+unique_name_in_owner = true
+layout_mode = 2
